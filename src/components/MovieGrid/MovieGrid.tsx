@@ -6,8 +6,9 @@ interface MovieGridProps {
     movies: Movie[];
     onSelect: (movie: Movie) => void;
 }
+
 const MovieGrid: React.FC<MovieGridProps> = ({ movies, onSelect }) => {
-    const handelCardClick = (movie: Movie) => {
+    const handleCardClick = (movie: Movie) => {
         onSelect(movie);
     };
 
@@ -17,7 +18,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies, onSelect }) => {
                 <li key={movie.id}>
                     <div
                         className={style.card}
-                        onClick={() => handelCardClick(movie)}
+                        onClick={() => handleCardClick(movie)}
                     >
                         <img
                             className={style.image}
@@ -33,7 +34,6 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies, onSelect }) => {
                 </li>
             ))}
         </ul>
-
     );
 };
 
