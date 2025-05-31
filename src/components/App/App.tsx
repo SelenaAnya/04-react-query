@@ -5,9 +5,7 @@ import { fetchMovies } from '../../services/movieService';
 import type { Movie } from '../../types/movie';
 import css from './App.module.css';
 
-interface AppProps {}
-
-const App: React.FC<AppProps> = () => {
+const App = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [page, setPage] = useState<number>(1);
   const [submittedQuery, setSubmittedQuery] = useState<string>('');
