@@ -4,6 +4,7 @@ import type { MoviesResponse } from '../types/movie';
 
 const BASE_URL = 'https://api.themoviedb.org/3';
 const BEARER_TOKEN = import.meta.env.VITE_TMDB_API_KEY;
+console.log('Bearer token:', BEARER_TOKEN);
 
 // Log the token for debugging (remove in production)
 console.log('Bearer token exists:', !!BEARER_TOKEN);
