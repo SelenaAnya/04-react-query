@@ -1,0 +1,151 @@
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    max-width: 800px;
+    max-height: 90vh;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #131111;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+    background-color: #3e0202;
+    color: #333;
+}
+
+.modalBody {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.modalPoster {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.modalInfo {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.modalTitle {
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+}
+
+.originalTitle {
+    margin: 0 0 16px 0;
+    color: #666;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.modalMeta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.releaseDate,
+.rating,
+.votes {
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: #4423be;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.rating {
+    background-color: #4423be;
+    color: #cfc5a7;
+}
+
+.overview {
+    line-height: 1.6;
+    color:#666;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.additionalInfo {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.additionalInfo p {
+    margin: 8px 0;
+    color: #666;
+}
+
+.additionalInfo strong {
+    color: #3f3004;
+}
+
+@media (max-width: 768px) {
+    .modalContent {
+        max-width: 95vw;
+        margin: 10px;
+    }
+
+    .modalBody {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .modalPoster {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .modalInfo {
+        padding-right: 0;
+    }
+
+    .modalTitle {
+        font-size: 1.5rem;
+    }
+
+    .closeButton {
+        top: 10px;
+        right: 15px;
+    } }
